@@ -1,0 +1,16 @@
+
+
+if __name__ == '__main__':
+    scoreVal = []
+    for _ in range(int(input())):
+        name = input()
+        score = float(input())
+        scoreVal.append([name, score])
+
+    scoreVal = sorted(scoreVal, key = lambda x: x[1])
+    second_lowest_score = sorted(list(set([x[1] for x in scoreVal])))[1]
+    desired_students = []
+    for stu in scoreVal:
+        if stu[1] == second_lowest_score:
+            desired_students.append(stu[0])
+    print("\n".join(sorted(desired_students)))
