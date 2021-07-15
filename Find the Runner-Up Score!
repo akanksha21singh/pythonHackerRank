@@ -1,0 +1,13 @@
+if __name__ == '__main__':
+    n = int(input())
+    arr = map(int, input().split())
+    li = list(arr)
+    li.sort()
+    max = li[-1]
+     
+    
+    for i in range(len(li)-1,-1,-1) :
+      if li[i] < max:
+        break
+    print(li[i])     
+    
