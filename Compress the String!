@@ -1,0 +1,5 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from itertools import groupby
+value = input()
+for c,items in groupby(value):
+    print("({}, {})".format(len(list(items)),c), end=" ") 
