@@ -1,0 +1,10 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from itertools import combinations
+N = int(input())
+value = input().split()
+N2 = int(input())
+
+valList = list(combinations(value,N2))
+valLen = filter(lambda k : 'a' in k, valList)
+compute = len(list(valLen))/len(valList)
+print("%.3f"%compute)
