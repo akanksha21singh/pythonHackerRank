@@ -1,0 +1,21 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+if __name__ == '__main__':
+    T = int(input())
+    
+    j=1
+    if(T>=1 and T<=10):
+        
+        while j<=T:
+             S = input()
+             a = ''
+             b = ''
+             for i in range(len(S)):
+                    if(i%2 == 0):
+                         a= a + S[i]
+                    else:
+                        b = b + S[i]  
+             print(a+' '+ b)
+             j = j+1
+       
+                     
+    
