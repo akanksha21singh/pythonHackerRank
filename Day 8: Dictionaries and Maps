@@ -1,0 +1,42 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+n= int(input())
+i=1;
+Dict = {}
+while(i<=n):
+    name = input()
+    l = name.split() 
+    key = l[0]
+    value = l[1]
+    Dict[key] = value
+    i = i+1
+
+j =0
+query = []
+while(1) :
+    try:
+        z=input()
+    except EOFError:
+        break
+    query.append(z)
+    j= j+1
+
+i=0 
+found = 0  
+
+while(i<j) :
+    if query[i] in Dict.keys():
+        print(query[i]+'='+Dict[query[i]])
+        
+    else:
+        print('Not found')
+    i=i+1    
+                
+            
+             
+    
+    
+    
+       
+     
+    
+
