@@ -1,0 +1,49 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+b =  []
+def decimaltoBinary(n):
+    
+    if n>=1:
+        b.append(n%2)
+        decimaltoBinary(n // 2)
+    else:
+        return 
+        
+        
+        
+       
+    
+
+if __name__ == '__main__':
+    n = int(input())
+    l=[]
+    if n>=1 and n<=1000000:
+       decimaltoBinary(n)
+       
+    b.reverse()
+    count = 0
+    maxValue = 0
+    flag = 0
+    
+    
+    for i in b :
+        if i==0:
+            flag = 0
+            if count > maxValue:
+                maxValue = count
+            count = 0    
+            
+        elif i==1:
+             flag = 1
+             count = count+1
+                
+    if count > maxValue:
+            maxValue = count       
+    print(maxValue)                
+                
+             
